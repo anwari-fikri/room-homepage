@@ -1,0 +1,51 @@
+import React from "react";
+import { useState } from "react";
+import iconHamburger from "../assets/icon-hamburger.svg";
+import iconClose from "../assets/icon-close.svg";
+import logo from "../assets/logo.svg";
+
+const Navigation = () => {
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+  return (
+    <>
+      <div className="absolute pt-12 w-full flex justify-center">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="absolute pt-12 pl-8">
+        <button onClick={() => setIsHamburgerOpen(!!!isHamburgerOpen)}>
+          <img src={iconHamburger} alt="Angle Left" />
+        </button>
+      </div>
+
+      {isHamburgerOpen && (
+        <div
+          onClick={() => setIsHamburgerOpen(!!!isHamburgerOpen)}
+          className="fixed right-0 top-0 w-full h-screen bg-black/50 "
+        >
+          <div className="h-[110px] w-full px-8 bg-white">
+            <div className="pt-12 w-full flex justify-between">
+              <img src={iconClose} alt="close" className="inline object-none" />
+              <div className="flex gap-8 font-semibold">
+                <ul>
+                  <li>home</li>
+                </ul>
+                <ul>
+                  <li>shop</li>
+                </ul>
+                <ul>
+                  <li>about</li>
+                </ul>
+                <ul>
+                  <li>contact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Navigation;

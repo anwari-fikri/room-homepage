@@ -1,20 +1,40 @@
 import React from "react";
+import { useState } from "react";
 import iconAngleLeft from "../assets/icon-angle-left.svg";
 import iconAngleRight from "../assets/icon-angle-right.svg";
 import iconArrow from "../assets/icon-arrow.svg";
 import heroMobile1 from "../assets/mobile-image-hero-1.jpg";
+import heroMobile2 from "../assets/mobile-image-hero-2.jpg";
+import heroMobile3 from "../assets/mobile-image-hero-3.jpg";
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const images = [heroMobile1, heroMobile2, heroMobile3];
+
+  const handleNextClick = () => {
+    setCurrentImage((currentImage + 1) % images.length);
+  };
+
+  const handlePrevClick = () => {
+    setCurrentImage((currentImage - 1 + images.length) % images.length);
+  };
+
   return (
     <>
       <div
         className="flex justify-end items-end w-full h-[360px] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroMobile1})` }}
+        style={{ backgroundImage: `url(${images[currentImage]})` }}
       >
-        <button className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center">
+        <button
+          onClick={handlePrevClick}
+          className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center"
+        >
           <img src={iconAngleLeft} alt="Angle Left" />
         </button>
-        <button className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center">
+        <button
+          onClick={handleNextClick}
+          className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center"
+        >
           <img src={iconAngleRight} alt="Angle Right" />
         </button>
       </div>
