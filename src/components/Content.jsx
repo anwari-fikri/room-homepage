@@ -4,9 +4,9 @@ import aboutLight from "../assets/image-about-light.jpg";
 
 const Content = () => {
   return (
-    <div>
-      <img src={aboutDark} alt="dark furniture" />
-      <div className="flex flex-col px-8 pt-14 pb-16 gap-4">
+    <div className="md:flex md:flex-grow ">
+      <img src={aboutDark} alt="dark furniture" className="h-full" />
+      <div className="flex flex-col justify-center px-8 pt-14 pb-16 gap-4">
         <h2 className="tracking-[5px] uppercase font-semibold text-sm">
           About our Furniture
         </h2>
@@ -19,7 +19,7 @@ const Content = () => {
           dream space.
         </p>
       </div>
-      <img src={aboutLight} alt="white chair" />
+      <img src={aboutLight} alt="white chair" className="inline object-none" />
     </div>
   );
 };

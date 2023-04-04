@@ -40,7 +40,7 @@ const Hero = () => {
                 : mobileImages[currentImage]
             }
             alt="product background"
-            className="h-full w-full"
+            className="md:h-[534px] w-full"
           />
         </div>
         <div className="flex absolute md:hidden">
