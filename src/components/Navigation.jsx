@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="absolute pt-12 w-full flex justify-center gap-14 md:justify-start md:pl-16">
+      <div className="z-10 absolute pt-12 w-full flex justify-center gap-14 md:justify-start md:pl-16">
         <img src={logo} alt="logo" className="inline object-none" />
         <div className="hidden text-white gap-6 md:flex ">
           <ul>
@@ -26,7 +26,7 @@ const Navigation = () => {
           </ul>
         </div>
       </div>
-      <div className="absolute pt-12 pl-8 md:hidden">
+      <div className="z-10 absolute pt-12 pl-8 md:hidden">
         <button onClick={() => setIsHamburgerOpen(!!!isHamburgerOpen)}>
           <img src={iconHamburger} alt="Angle Left" />
         </button>
@@ -35,7 +35,7 @@ const Navigation = () => {
       {isHamburgerOpen && (
         <div
           onClick={() => setIsHamburgerOpen(!!!isHamburgerOpen)}
-          className="fixed right-0 top-0 w-full h-screen bg-black/50 "
+          className="z-10 fixed right-0 top-0 w-full h-screen bg-black/50 "
         >
           <div className="h-[110px] w-full px-8 bg-white">
             <div className="pt-12 w-full flex justify-between">
