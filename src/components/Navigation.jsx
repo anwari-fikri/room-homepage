@@ -9,10 +9,24 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="absolute pt-12 w-full flex justify-center">
-        <img src={logo} alt="logo" />
+      <div className="absolute pt-12 w-full flex justify-center gap-14 md:justify-start md:pl-16">
+        <img src={logo} alt="logo" className="inline object-none" />
+        <div className="hidden text-white gap-6 md:flex ">
+          <ul>
+            <li>home</li>
+          </ul>
+          <ul>
+            <li>shop</li>
+          </ul>
+          <ul>
+            <li>about</li>
+          </ul>
+          <ul>
+            <li>contact</li>
+          </ul>
+        </div>
       </div>
-      <div className="absolute pt-12 pl-8">
+      <div className="absolute pt-12 pl-8 md:hidden">
         <button onClick={() => setIsHamburgerOpen(!!!isHamburgerOpen)}>
           <img src={iconHamburger} alt="Angle Left" />
         </button>
