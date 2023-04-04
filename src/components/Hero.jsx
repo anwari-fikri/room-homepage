@@ -70,22 +70,26 @@ const Hero = () => {
           collection and make your property a reflection of you and what you
           love.
         </p>
-        <div className="flex gap-8 pt-5">
+        <div className="flex gap-8 pt-5 cursor-pointer hover:text-dark-gray ">
           <p className="uppercase text-medium font-medium tracking-[10px]">
             Shop Now
           </p>
-          <img src={iconArrow} alt="Arrow" className="inline object-none" />
+          <img
+            src={iconArrow}
+            alt="Arrow"
+            className="inline object-none fill-current"
+          />
         </div>
         <div className="hidden md:flex absolute bottom-0 left-0">
           <button
             onClick={handlePrevClick}
-            className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center"
+            className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center hover:bg-very-dark-gray"
           >
             <img src={iconAngleLeft} alt="Angle Left" />
           </button>
           <button
             onClick={handleNextClick}
-            className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center"
+            className="bg-black text-white w-[55px] h-[55px] flex justify-center items-center hover:bg-very-dark-gray"
           >
             <img src={iconAngleRight} alt="Angle Right" />
           </button>

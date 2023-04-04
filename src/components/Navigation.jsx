@@ -11,19 +11,31 @@ const Navigation = () => {
     <>
       <div className="z-10 absolute pt-12 w-full flex justify-center gap-14 md:justify-start md:pl-16">
         <img src={logo} alt="logo" className="inline object-none" />
-        <div className="hidden text-white gap-6 md:flex ">
-          <ul>
-            <li>home</li>
-          </ul>
-          <ul>
-            <li>shop</li>
-          </ul>
-          <ul>
-            <li>about</li>
-          </ul>
-          <ul>
-            <li>contact</li>
-          </ul>
+        <div className="cursor-pointer hidden text-white gap-6 md:flex ">
+          <div className="group">
+            <ul>
+              <li>home</li>
+            </ul>
+            <div className="pt-2 w-1/2 mx-auto border-b-2 border-transparent group-hover:border-white"></div>
+          </div>
+          <div className="group">
+            <ul>
+              <li>shop</li>
+            </ul>
+            <div className="pt-2 w-1/2 mx-auto border-b-2 border-transparent group-hover:border-white"></div>
+          </div>
+          <div className="group">
+            <ul>
+              <li>about</li>
+            </ul>
+            <div className="pt-2 w-1/2 mx-auto border-b-2 border-transparent group-hover:border-white"></div>
+          </div>
+          <div className="group">
+            <ul>
+              <li>contact</li>
+            </ul>
+            <div className="pt-2 w-1/2 mx-auto border-b-2 border-transparent group-hover:border-white"></div>
+          </div>
         </div>
       </div>
       <div className="z-10 absolute pt-12 pl-8 md:hidden">
